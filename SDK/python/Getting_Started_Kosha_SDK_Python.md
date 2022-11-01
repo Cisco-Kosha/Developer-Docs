@@ -16,6 +16,8 @@ Kosha provides you with a SDK in a variety of languages to get your connectors i
 tar -xvf <generated_client>.zip -C <your_project_directory>
 ```
 
+**_NOTE:_** There is no need to modify code in the client library.
+
 2. Install into pip via the Setuptools based setup.py script
 
 For a specific user:
@@ -53,4 +55,6 @@ with openapi_client.ApiClient(configuration) as api_client:
         print("Exception when calling <client> <endpoint>: %s\n" % e)
 ```
 
+### The world is your oyster!
+Now that you've implemented one endpoint for one connector, you can implement any other endpoint in any other connector within Kosha. The process is universal across connectors and allows for clean, consistent code across your applications.
 
