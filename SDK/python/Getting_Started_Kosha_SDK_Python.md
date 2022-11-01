@@ -13,9 +13,9 @@ Kosha provides you with a SDK in a variety of languages to get your connectors i
 1. Navigate to **My Connectors** in the Connectors tab and click into your connector of choice.
 2. Click into Usage & SDK
 3. You should see this screen with a variety of language options presented. 
-![image info](./images/usage_sdk.png)
+![image info](../images/usage_sdk.png)
 4. Click into your language of choice and select the option to download its SDK.
-![image info](./images/download_sdk.png)
+![image info](../images/download_sdk.png)
 
 ##### Install Into Project
 1. Unzip the SDK into your project 
