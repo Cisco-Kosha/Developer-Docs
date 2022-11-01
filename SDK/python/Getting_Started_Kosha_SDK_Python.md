@@ -2,13 +2,20 @@
 
 Kosha provides you with a SDK in a variety of languages to get your connectors integrated into your code and processes with minimal toil. Each connector has its own SDK as a collection of client libraries for the connector API. Using this SDK will allow for faster development and cleaner code.  
 
+##### What you'll learn
+[x] How to interact with the Kosha user interface to obtain the client library
+[x] How to add the Kosha client library to your project
+[x] How to programatically connect to a Kosha endpoint using the client SDK 
+
 ## Installation
 
 ##### Download the SDK
 1. Navigate to **My Connectors** in the Connectors tab and click into your connector of choice.
 2. Click into Usage & SDK
-3. You should see this screen with a variety of language options presented. (**add picture here**)
-4. Click into your language of choice and select the option to download its SDK (**add picture here**)5. 
+3. You should see this screen with a variety of language options presented. 
+![image info](./images/usage_sdk.png)
+4. Click into your language of choice and select the option to download its SDK.
+![image info](./images/download_sdk.png)
 
 ##### Install Into Project
 1. Unzip the SDK into your project 
