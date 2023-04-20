@@ -40,13 +40,13 @@ node ./main.js or npm run start
 
 ```javascript with go-sdk
 // so we will define our constants here
-const openapi-kosha = require("openapi-client");
+const openapi_kosha = require("openapi-client");
 
 const url = '"https://<your_connector_name>.<your_company>.dev.kosha.app/<your_endpoint_path>"';
 
 const data = {} // modify as per the request
 
-openapi-kosha.init({
+openapi_kosha.init({
   url: url, // set your service url explicitly. Defaults to the one generated from your OpenAPI spec
   getAuthorization // Add a `getAuthorization` handler for when a request requires auth credentials
 });
