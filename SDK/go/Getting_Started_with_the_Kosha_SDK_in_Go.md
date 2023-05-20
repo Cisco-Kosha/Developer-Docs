@@ -22,17 +22,46 @@
 tar -xvf <generated_client>.zip -C <your_project_directory>
 ```
 
-**_NOTE:_** There is no need to modify code in the client library.
+2. Navigate to the `go-client` library and edit the `go.mod` file
 
-2. Download all go client dependencies
+Change the go module to `module github.com/kosha/go-sdk`
+
+Run the following commands:
+
+```sh
+go get github.com/stretchr/testify/assert
+go get golang.org/x/oauth2
+go get golang.org/x/net/context
+```
+
+Overall, your go-client `go.mod` should look something like this:
+
+```sh
+# cat go.mod
+
+module github.com/kosha/go-sdk
+
+go 1.13
+
+require (
+	cloud.google.com/go v0.65.0 // indirect
+	github.com/stretchr/testify v1.8.3 // indirect
+	golang.org/x/net v0.10.0 // indirect
+	golang.org/x/oauth2 v0.8.0
+)
+
+```
+
+3. Download all go client dependencies
 
 
 ```sh
-go mod tidy
 go mod download
 ```
 
 ##### Import and Configure
+
+Navigate to your app, and import the `go-client` module like so:
 
 ```go
 package main
@@ -49,11 +78,13 @@ func main() {
 		Servers: openapi.ServerConfigurations{
 			{
 				URL:         "https://<your_connector_name>.<your_company>.dev.kosha.app",
-				Description: "No description provided",
+				Description: "Connector",
 			},
 		},
 		OperationServers: map[string]openapi.ServerConfigurations{},
 	}
+	// add your kosha jwt token as a header
+	cfg.AddDefaultHeader('Authorization', 'Bearer ' + '<paste-your-jwt-token-here>');
 
 	client := openapi.NewAPIClient(cfg)
 	res := openapi.<endpoint>{
